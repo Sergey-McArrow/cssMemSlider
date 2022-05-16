@@ -1,0 +1,15 @@
+{
+  "name": "cssmemslider",
+  "version": "1.0.0",
+  "description": "MemSlider",
+  "main": "script.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+:https://github.com/Sergey-McArrow/cssMemSlider"
+  },
+  "author": "Serhii Makarov",
+  "license": "ISC"
+}
