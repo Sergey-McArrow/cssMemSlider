@@ -3,25 +3,31 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
 .wrapper {
   display: flex;
   justify-content: space-evenly;
   /* text-align: center; */
 }
-
+.slider-wrapper {
+  padding: 10px;
+}
 .slide {
   width: 100%;
   display: none;
 }
 .image {
-  min-width: 700px;
-  max-width: 700px;
+  /* min-width: 700px;
+  max-width: 700px; */
+  width: 100%;
   min-height: 400px;
   max-height: 400px;
-  transition: 0.5s ease-in-out;
+  transition: opacity 4s;
+  opacity: 0.9;
 }
 .active {
   display: block;
+  margin: left 10px;
 }
 .textcontent {
   display: flex;
@@ -38,7 +44,7 @@ body {
   align-items: center;
   position: fixed;
   left: 60%;
-  top: 90%;
+  top: 420px;
 }
 .dot {
   width: 15px;
@@ -66,10 +72,10 @@ body {
 
 @keyframes move-right {
   from {
-    left: 0;
+    right: -100%;
   }
   to {
-    left: -100%;
+    right: 0;
   }
 }
 
@@ -82,10 +88,10 @@ body {
 
 @-webkit-keyframes move-left {
   from {
-    left: 0%;
+    left: -100%;
   }
   to {
-    left: 100%;
+    left: 0%;
   }
 }
 
@@ -103,4 +109,23 @@ body {
   animation-name: move-left;
   -webkit-animation-duration: 3s;
   animation-duration: 3s;
+}
+
+@media screen and (max-width: 321px) and (min-width: 319px) {
+  .image {
+    min-height: auto;
+    height: auto;
+    max-height: 50vh;
+  }
+  .text {
+    font-size: 10px;
+  }
+  .dots {
+    left: 75%;
+    top: 50%;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
 }
